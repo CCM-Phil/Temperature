@@ -6,7 +6,7 @@ RUN apt-get update && apt-get install -y python python-dev python-pip mplayer
 #RUN pip install RPi.Gpio w1thermsensor
 #RUN sudo modprobe w1-gpio
 #RUN sudo modprobe w1-therm
-
+RUN pip install git+https://github.com/resin-io/resin-sdk-python.git
 ADD . /app
 
 #CMD ["python", "/app/hello.py"]
