@@ -9,4 +9,4 @@ RUN apt-get update && apt-get install -y python python-dev python-pip mplayer
 
 ADD . /app
 
-CMD ["python", "/app/hello.py"]
+#CMD ["python", "/app/hello.py"]
