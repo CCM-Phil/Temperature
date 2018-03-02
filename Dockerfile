@@ -4,7 +4,9 @@ FROM resin/rpi-raspbian:stretch
 RUN apt-get update && apt-get install -y python python-dev python-pip mplayer
 
 #RUN pip install RPi.Gpio w1thermsensor
+RUN sudo modprobe w1-gpio
+RUN sudo modprobe w1-therm
 
-#ADD . /app
+ADD . /app
 
-#CMD ["python", "/app/temp_to_speech.py"]
+CMD ["python", "/app/hello.py"]
